@@ -1,10 +1,10 @@
 var fs = require("fs");
 
-function putCar(app) {
-    app.put('/update/:id', function (req, res) {
-        fs.readFile(__dirname + "/" + "cars.json", 'utf8', function (err, data) {
+function putCar(app, jsonName) {
+    app.put('/:id', function (req, res) {
+        fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
             data = JSON.parse(data);
-            car = data["car" + req.params.id];
+            car = data[req.params.id];
 
             for (key of Object.keys(req.body)) {
                 if (Object.keys(car).includes(key)) {

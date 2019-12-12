@@ -1,10 +1,10 @@
 var fs = require("fs");
 
-function listCarById(app) {
+function listCarById(app, jsonName) {
     app.get('/:id', function (req, res) {
-        fs.readFile(__dirname + "/" + "cars.json", 'utf8', function (err, data) {
+        fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
             data = JSON.parse(data);
-            car = data["car" + req.params.id]
+            car = data[req.params.id]
             res.end(JSON.stringify(car));
         });
     })
