@@ -1,8 +1,8 @@
 var fs = require("fs");
 
-function listCars(app){
-   app.get('/listCars', function (req, res) {
-      fs.readFile(__dirname + "/" + "cars.json", 'utf8', function (err, data) {
+function listCars(app, jsonName){
+   app.get('/cars', function (req, res) {
+      fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
          console.log(data);
          res.end(data);
       });
@@ -10,4 +10,3 @@ function listCars(app){
 }
 
 module.exports = listCars;
-
