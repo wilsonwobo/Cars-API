@@ -1,9 +1,9 @@
-var fs = require("fs");
+var readFile = require('../functions-js/readFile.js');
 
 function putCar(app, jsonName) {
     app.put('/:id', function (req, res) {
-        fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
-            data = JSON.parse(data);
+        readFile(jsonName)
+        .then(data => {
             car = data[req.params.id];
 
             for (key of Object.keys(req.body)) {
