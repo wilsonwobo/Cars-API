@@ -2,13 +2,13 @@ var fs = require("fs");
 
 function addCar(app, jsonName) {
     app.post('/', function (req, res) {
-        // First read existing users.
 
         fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
             if (!err) {
                 data = JSON.parse(data);
 
-                let numOfCars = Object.keys(data).length;
+                let result = Object.keys(data).map(Number);
+                let numOfCars = Math.max(...result);
                 let nameOfCar = (numOfCars + 1).toString();
 
                 var car = {};
