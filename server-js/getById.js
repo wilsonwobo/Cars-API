@@ -1,9 +1,9 @@
-var fs = require("fs");
+var readFile = require('../functions-js/readFile.js');
 
 function listCarById(app, jsonName) {
     app.get('/:id', function (req, res) {
-        fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
-            data = JSON.parse(data);
+        readFile(jsonName)
+        .then(data => {
             car = data[req.params.id]
             res.end(JSON.stringify(car));
         });
