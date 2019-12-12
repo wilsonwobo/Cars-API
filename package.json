@@ -1,0 +1,22 @@
+{
+  "name": "cars-api",
+  "version": "1.0.0",
+  "description": "# Cars Web Dev",
+  "main": "get.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonwobo/Cars-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wilsonwobo/Cars-API/issues"
+  },
+  "homepage": "https://github.com/wilsonwobo/Cars-API#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
