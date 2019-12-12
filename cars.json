@@ -1,23 +1,20 @@
 {
-    "1" : {
-      "make" : "Honda",
-      "model" : "Civic",
-      "colour" : "Red",
-      "year" : "1987"
-    },
-    
-    "2" : {
-      "make" : "Toyota",
-      "model" : "Corolla",
-      "colour" : "Turquoise",
-      "year" : "2001"
-    },
-    
-    "3" : {
-      "make" : "Porsche",
-      "model" : "911 GT3 RS",
-      "colour" : "Silver",
-      "year" : "2007"
-    }
- }
- 
+   "1": {
+      "make": "Honda",
+      "model": "Civic",
+      "colour": "Red",
+      "year": "1987"
+   },
+   "2": {
+      "make": "Toyota",
+      "model": "Corolla",
+      "colour": "Turquoise",
+      "year": "2001"
+   },
+   "3": {
+      "make": "Porsche",
+      "model": "911 GT3 RS",
+      "colour": "Silver",
+      "year": "2007"
+   }
+}

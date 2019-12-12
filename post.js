@@ -1,7 +1,7 @@
 var fs = require("fs");
 
 function addCar(app, jsonName){
-    app.post('/cars', function (req, res) {
+    app.post('/', function (req, res) {
         // First read existing users.
 
         fs.readFile(__dirname + "/" + jsonName, 'utf8', function (err, data) {
