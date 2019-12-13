@@ -1,11 +1,5 @@
 var mysql = require('mysql');
-
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
-    database: "carsdb"
-});
+var con = require('./connection.js');
 
 query = 
 "CREATE TABLE cars ( \
