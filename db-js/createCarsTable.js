@@ -1,5 +1,6 @@
-var mysql = require('mysql');
-var con = require('./connection.js');
+var MysqlConnection = require('../functions-db-js/query.js');
+
+var con = new MysqlConnection();
 
 query =
     "CREATE TABLE cars ( \
@@ -11,7 +12,7 @@ query =
     id INT NOT NULL AUTO_INCREMENT \
     )";
 
-con.connect(function (err) {
+con.connection.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
     var sql = query;

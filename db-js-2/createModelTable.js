@@ -5,9 +5,10 @@ var con = new MysqlConnection();
 query =
     "CREATE TABLE model ( \
     model VARCHAR(255), \
-    make INT, \
+    make_id INT, \
     PRIMARY KEY (id), \
-    id INT NOT NULL AUTO_INCREMENT \
+    id INT NOT NULL AUTO_INCREMENT, \
+    FOREIGN KEY (make_id) REFERENCES make(id) \
     )";
 
 con.connection.connect(function (err) {
