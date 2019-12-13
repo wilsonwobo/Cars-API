@@ -12,7 +12,10 @@ function putCar(app, jsonName) {
                 }
             }
 
-            res.end(JSON.stringify(car));
+            res.send(JSON.stringify(car));
+        })
+        .catch(err => {
+            res.send(err)
         });
     })
 }

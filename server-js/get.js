@@ -4,7 +4,10 @@ function listCars(app, jsonName) {
    app.get('/', function (req, res) {
       readFile(jsonName)
       .then(data => {
-         res.end(data);
+         res.send(data);
+      })
+      .catch(err => {
+         res.send(err)
       });
    })
 }
