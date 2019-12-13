@@ -5,7 +5,10 @@ function listCarById(app, jsonName) {
         readFile(jsonName)
         .then(data => {
             car = data[req.params.id]
-            res.end(JSON.stringify(car));
+            res.send(JSON.stringify(car));
+        })
+        .catch(err => {
+            res.send(err)
         });
     })
 }

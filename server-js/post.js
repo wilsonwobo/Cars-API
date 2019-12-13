@@ -20,6 +20,9 @@ function addCar(app, jsonName) {
             res.send(data);
 
             console.log("Added: " + data[nameOfCar].make + " " + data[nameOfCar].model);
+        })
+        .catch(err => {
+            res.send(err)
         });
     });
 }

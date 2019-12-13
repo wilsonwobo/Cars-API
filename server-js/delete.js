@@ -5,7 +5,10 @@ function deleteCar(app, jsonName) {
         readFile(jsonName)
         .then(data => {
             delete data[req.params.id];
-            res.end(JSON.stringify(data));
+            res.send(JSON.stringify(data));
+        })
+        .catch(err => {
+            res.send(err)
         });
     })
 }
