@@ -12,5 +12,6 @@ con.connect(function (err) {
     con.query("CREATE DATABASE carsdb", function (err, result) {
         if (err) throw err;
         console.log("Database created");
+        con.end();
     });
 });
